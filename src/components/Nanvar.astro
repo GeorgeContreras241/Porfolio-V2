@@ -1,0 +1,57 @@
+---
+
+---
+
+<header>
+  <nav>
+    <a href="#welcome">Inicio</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#about">Sobre mi</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 40px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav {
+    width: clamp(200px, 95%, 600px);
+    height:100%;
+    display: flex;
+    justify-content: center;
+    aligh-item:center;
+    gap: 20px;
+    opacity: 0.95;
+    backdrop-filter: blur(3 px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    background-color: var(--color-accent);
+    border-radius: 9999px;
+    filter: blur(.1px);
+  }
+
+  nav > a {
+    text-decoration: none;
+    color: var(--color-bg);
+    padding: 6px 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    filter: brightness(1.5);  
+
+  }
+  @media screen and (max-width: 800px) {
+    nav{
+      width:90%;
+    }
+  }
+</style>

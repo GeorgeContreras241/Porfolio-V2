@@ -1,0 +1,114 @@
+---
+
+---
+
+<div id="welcome">
+  <section>
+    <div class="welcome-img">
+      <img
+        src="https://i.pinimg.com/736x/06/be/d8/06bed8da894432ded576ef581edd04a5.jpg"
+        alt=""
+      />
+    </div>
+    <div class="welcome-text">
+      <h1>Hola, Soy George Contreras 👋</h1>
+      <span>Programador Web FullStack Junior </span>
+      <p>
+        Tecnologo en desarrollo de software con experiencia en desarrollo web,
+        desarrollo de aplicaciones móviles, arquitectura de software y diseño
+        gráfico.
+      </p>
+      <div class="welcome-a">
+        <a href="#">Linkedin</a>
+        <a href="#">GitHub</a>
+        <a href="#contact">Contactame</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  #welcome {
+    display: grid;
+    place-items: center;
+    height: calc(100vh - 80px);
+    position: relative;
+    z-index: 100;
+  }
+  section {
+    width: clamp(100px, 95%, 1200px);
+    margin: auto;
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+  }
+  .welcome-img {
+    width: clamp(100px, 90%, 550px);
+    height: clamp(100px, 90%, 550px);
+    margin: auto;
+    mask-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 30%,
+      rgba(0, 0, 0, 0.5) 45%,
+      rgba(0, 0, 0, 0.2) 60%,
+      rgba(0, 0, 0, 0) 70%
+    );
+
+    -webkit-mask-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 0.5) 35%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0) 70%
+    );
+    aspect-ratio: 1/1;
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+  }
+  .welcome-img > img {
+    max-width: 100%;  
+    height: auto;
+  }
+  .welcome-text {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 20px;
+    min-width: 400px;
+    width: 100%;
+  }
+  .welcome-text > h1 {
+    font-size: clamp(1.5rem, 5vw, 3.3rem);
+    color: var(--color-white);
+  }
+  .welcome-text > span {
+    font-size: clamp(1.2rem, 2vw, 1.9rem);
+    color: var(--color-text);
+  }
+  .welcome-text > p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--color-text-secondary);
+  }
+  .welcome-a{
+    display: flex;
+    flex-flow: row;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-right: 2.5rem;
+  }
+  .welcome-a > a {
+    font-size: clamp(.8rem, 1.9vw, 1rem);
+    color: var(--color-white);
+    text-decoration: none;
+    background-color: var(--color-primary);
+    padding: 6px 12px;
+  }
+
+  @media screen and (max-width: 800px) {
+    section {
+      flex-flow: column;
+    }
+    .welcome-text {
+      min-width: 100px;
+    }
+  }
+</style>
