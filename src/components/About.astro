@@ -70,7 +70,9 @@
 <style>
    section {
       position: relative;
-      width: 100%;
+      width: clamp(100px, 95%, 1200px);
+      padding-top: 130px;
+      margin: auto;
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -96,7 +98,7 @@
       border: var(--border-light);
       border-radius: 8px;
       z-index: 1;
-      opacity: 0.90;
+      opacity: 0.9;
       padding: 20px;
    }
 
