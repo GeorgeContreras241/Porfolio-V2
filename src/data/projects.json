@@ -1,0 +1,106 @@
+[
+   {
+      "id": 1,
+      "title": "Metalicas J y N",
+      "description": "Loading page del taller de ornamentación Metálicas J y N, realizada en React.",
+      "tec": [
+         "Html",
+         "Css",
+         "Js",
+         "React",
+         "React-toastify",
+         "Emailjs",
+         "Axios"
+      ],
+      "url": "https://metalicasjyn.vercel.app/",
+      "git": "https://github.com/GeorgeContreras241/Frontend-metalicas-j-y-n.git",
+      "image": "https://porfolio-george-contreras.vercel.app/images/project01.jpg",
+      "date": "24/08/2022"
+   },
+   {
+      "id": 2,
+      "title": "Consumo de Api Store Fake",
+      "description": "En este proyecto se consumió la API gratuita Fake Store API.",
+      "tec": [
+         "Html",
+         "Css",
+         "Js",
+         "React",
+         "React-redux",
+         "React-icons",
+         "React-toolkit"
+      ],
+      "url": "https://store-api-sage.vercel.app/",
+      "git": "https://github.com/GeorgeContreras241/Store-Api.git",
+      "image": "https://porfolio-george-contreras.vercel.app/images/project04.jpg",
+      "date": "24/08/2022"
+   },
+   {
+      "id": 3,
+      "title": "Porfolio V1",
+      "description": "Portafolio personal hecho con Next.js.",
+      "tec": [
+         "Rtml",
+         "Css",
+         "Js",
+         "React",
+         "Next js",
+         "Emotion/react",
+         "React-icons"
+      ],
+      "url": "https://porfolio-george-contreras.vercel.app/",
+      "git": "https://github.com/GeorgeContreras241/Porfolio.git",
+      "image": "https://porfolio-george-contreras.vercel.app/images/project05.jpg",
+      "date": "24/08/2022"
+   },
+   {
+      "id": 4,
+      "title": "Consumo total de la API de Rick and Morty",
+      "description": "Consumo total de la API de Rick and Morty con buscador y paginación de personajes y temporadas.",
+      "tec": [
+         "Html",
+         "Css",
+         "Js",
+         "React",
+         "Next js",
+         "React-icons"
+      ],
+      "url": "https://rick-next-red.vercel.app/",
+      "git": "https://github.com/GeorgeContreras241/Rick-next.git",
+      "image": "https://porfolio-george-contreras.vercel.app/images/project02.jpg",
+      "date": "24/08/2022"
+   },
+   {
+      "id": 5,
+      "title": "Clon de la página de inicio de Rick y Morty",
+      "description": "Clon de las páginas de bienvenida de la API de Rick and Morty.",
+      "tec": [
+         "Html",
+         "Css",
+         "Js",
+         "React",
+         "Next js"
+      ],
+      "url": "https://rick-and-morty-kappa-one.vercel.app/",
+      "git": "https://github.com/GeorgeContreras241/Rick-and-Morty.git",
+      "image": "https://porfolio-george-contreras.vercel.app/images/project03.jpg",
+      "date": "24/08/2022"
+   },
+   {
+      "id": 6,
+      "title": "Gestor de contraseñas local.",
+      "description": "Web que permite gestionar contraseñas a través de un archivo encriptado con AES.",
+      "tec": [
+         "Html",
+         "Css",
+         "Js",
+         "React",
+         "Zustand",
+         "Crypto-js"
+      ],
+      "url": "https://password-manager-three-liard.vercel.app/",
+      "git": "https://github.com/GeorgeContreras241/password-manager.git",
+      "image": "https://porfolio-george-contreras.vercel.app/images/project06.jpg",
+      "date": "24/08/2022"
+   }
+]

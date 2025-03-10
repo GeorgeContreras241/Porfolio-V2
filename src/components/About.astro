@@ -1,3 +1,7 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
 <section id="about">
    <div class="parent">
       <div class="card">
@@ -12,7 +16,24 @@
                <span class="green box"></span>
             </div>
          </div>
-         <div class="card__content"> </div>
+         <div class="target">
+            <div class="target-img">
+               <img
+                  src="https://comicbook.com/wp-content/uploads/sites/4/2024/09/83bbdd89-aadc-4aa0-9336-2f9b05d7870b.jpg"
+                  alt=""
+               />
+            </div>
+            <div class="target-title">
+               <p>George Contreras</p>
+               <span>Junior Developer</span>
+            </div>
+            <p class="target-subtitle">Full Stack MERN Developer</p>
+            <div class="target-a">
+               <a href=""><Icon name="mdi:linkedin" height={50} width={50} /></a
+               >
+               <a href=""><Icon name="mdi:github" height={50} width={50} /></a>
+            </div>
+         </div>
       </div>
       <div class="presentation">
          <span>Yo soy George Contreras Programador junior</span>
@@ -58,10 +79,9 @@
             desarrollador junior, estoy en constante aprendizaje y buscando
             nuevos retos que me permitan crecer y mejorar en cada proyecto.</p
          >
-         <ul>
-            <li><a href="">git hub</a> </li>
-            <li><a href="">linkedin</a> </li>
-            <li>correo</li>
+         <ul class="text-a">
+            <a href="" class="text-link">Git Hub</a>
+            <a href="" class="text-link">Linkedin</a>
          </ul>
       </div>
    </div>
@@ -98,10 +118,74 @@
       border: var(--border-light);
       border-radius: 8px;
       z-index: 1;
-      opacity: 0.9;
       padding: 20px;
    }
+   .target {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      height: 90%;
+   }
+   .target-img {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+   .target-img > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      aspect-ratio: 16 / 9;
+   }
+   .target-title {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      gap: 10px;
+      padding-left: 20px;
+      color: var(--color-white);
+   }
 
+   .target-subtitle {
+      font-size: clamp(0.8rem, 1.9vw, 1rem);
+      padding-left: 20px;
+      margin-bottom: 30px;
+      font-weight: 600;
+   }
+   .target-title > p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
+   .target-title > span {
+      font-size: clamp(0.7rem, 2vw, 0.8rem);
+      color: var(--color-text-secondary);
+   }
+   .target-a {
+      display: flex;
+      flex-flow: row;
+      gap: 20px;
+      justify-content: flex-end;
+      padding-right: 10px;
+   }
+   .target-a > a {
+      font-size: clamp(0.8rem, 1.9vw, 1rem);
+      color: var(--color-white);
+      text-decoration: none;
+      transition:
+         transform 0.5s ease,
+         color 0.3s ease;
+   }
+   .target-a > a:first-child:hover {
+      color: var(--color-primary);
+      transform: scale(1.1);
+   }
+   .target-a > a:nth-child(2):hover {
+      color: var(--color-text);
+      transform: scale(1.1);
+   }
    .tools {
       display: flex;
       align-items: center;
@@ -143,7 +227,6 @@
       grid-column: span 2 / span 2;
       grid-column-start: 3;
       border-radius: 8px;
-      opacity: 0.95;
       padding: 20px;
    }
    .presentation > span {
@@ -171,8 +254,8 @@
       grid-column-start: 5;
       background-color: var(--color-bg-secondary);
       border: var(--border-light);
-      opacity: 0.95;
       padding: 20px;
+      border-radius: 8px;
       display: grid;
       place-content: center;
    }
@@ -185,9 +268,9 @@
       grid-row: span 2 / span 2;
       grid-column-start: 1;
       grid-row-start: 4;
+      border-radius: 8px;
       background-color: var(--color-bg-secondary);
       border: var(--border-light);
-      opacity: 0.95;
       padding: 20px;
       display: flex;
       flex-flow: column nowrap;
@@ -208,7 +291,6 @@
    .frontend {
       background-color: var(--color-bg-secondary);
       border: var(--border-light);
-      opacity: 0.95;
       padding: 20px;
       border-radius: 8px;
       grid-column: span 3 / span 3;
@@ -239,7 +321,6 @@
    .backend {
       background-color: var(--color-bg-secondary);
       border: var(--border-light);
-      opacity: 0.95;
       padding: 20px;
       border-radius: 8px;
       grid-column: span 3 / span 3;
@@ -253,7 +334,6 @@
    .text {
       background-color: var(--color-bg-secondary);
       border: var(--border-light);
-      opacity: 0.95;
       padding: 20px;
       border-radius: 8px;
       grid-column: span 4 / span 4;
@@ -270,19 +350,23 @@
       padding-right: 10px;
       line-height: 1.9;
    }
-   .text > ul {
+   .text-a {
       display: flex;
       flex-flow: row nowrap;
       justify-content: flex-end;
       gap: 20px;
       padding-right: 20px;
    }
-   .text > ul > li {
-      list-style: none;
-   }
-   .text > ul > li > a {
-      color: var(--color-primary);
+   .text-link {
       text-decoration: none;
+      color: var(--color-white);
+      border: var(--border-light);
+      padding: 6px 14px;
+      border-radius: 8px;
+   }
+   .text-link:hover {
+      background-color: var(--color-hover);
+      box-shadow: var(--shadow-hover);
    }
    @media screen and (max-width: 900px) {
       .parent {
@@ -300,6 +384,7 @@
          width: 100%;
          grid-column: span 2 / span 2;
          grid-row: span 3 / span 3;
+         height: max-content;
       }
 
       .presentation {
@@ -339,6 +424,16 @@
          grid-row: span 2 / span 2;
          grid-row-start: 8;
          height: fit-content;
+      }
+      .text-a {
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: flex-end;
+         gap: 20px;
+         padding-right: 20px;
+      }
+      .text-link {
+         text-decoration: none;
       }
    }
 </style>

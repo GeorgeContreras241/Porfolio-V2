@@ -26,32 +26,30 @@
 
   nav {
     width: clamp(200px, 95%, 600px);
-    height:100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    aligh-item:center;
+    aligh-item: center;
     gap: 20px;
     opacity: 0.95;
     backdrop-filter: blur(3 px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     background-color: var(--color-accent);
     border-radius: 9999px;
-    filter: blur(.1px);
+    filter: blur(0.1px);
   }
 
   nav > a {
     text-decoration: none;
-    color: var(--color-bg);
+    color: var(--color-bg-secondary);
     padding: 6px 12px;
     font-weight: 600;
     display: flex;
-    align-items: center;
-    filter: brightness(1.5);  
-
+    align-items: center;  
   }
   @media screen and (max-width: 800px) {
-    nav{
-      width:90%;
+    nav {
+      width: 90%;
     }
   }
 </style>
