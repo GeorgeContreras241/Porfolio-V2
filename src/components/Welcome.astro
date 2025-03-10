@@ -6,7 +6,7 @@ import { Icon } from "astro-icon/components";
   <section>
     <div class="welcome-img">
       <img
-        src="https://i.pinimg.com/736x/06/be/d8/06bed8da894432ded576ef581edd04a5.jpg"
+        src="https://smartcms-media.s3.ap-south-1.amazonaws.com/e6b05202-c737-4ce8-95a1-6132364f716e/conversions/why-coding-essential-future-webp.webp"
         alt="Avatar de Programa"
       />
     </div>
@@ -39,7 +39,7 @@ import { Icon } from "astro-icon/components";
   #welcome {
     display: grid;
     place-items: center;
-    height: calc(100vh - 120px);
+    height: 90dvh;
     position: relative;
     z-index: 100;
   }
@@ -53,6 +53,7 @@ import { Icon } from "astro-icon/components";
   .welcome-img {
     width: clamp(100px, 90%, 550px);
     height: clamp(100px, 90%, 550px);
+    aspect-ratio: 16/9;
     margin: auto;
     mask-image: radial-gradient(
       circle,
@@ -69,7 +70,6 @@ import { Icon } from "astro-icon/components";
       rgba(0, 0, 0, 0.2) 50%,
       rgba(0, 0, 0, 0) 70%
     );
-    aspect-ratio: 1/1;
     box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
   }
   .welcome-img > img {
@@ -93,7 +93,8 @@ import { Icon } from "astro-icon/components";
   }
   .welcome-text > span {
     font-size: clamp(1.2rem, 2vw, 1.7rem);
-    color: var(--color-text);
+    color: var(--color-primary);
+    filter: drop-shadow(0 0 10px var(--color-primary));
   }
   .welcome-text > p {
     font-size: 1.1rem;
@@ -134,6 +135,10 @@ import { Icon } from "astro-icon/components";
     }
     .welcome-text {
       min-width: 100px;
+    }
+    .welcome-img {
+      width: clamp(100px, 70%, 300px);
+      height: clamp(100px, 80%, 300px);
     }
   }
 </style>

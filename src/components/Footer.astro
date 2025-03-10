@@ -1,0 +1,85 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer>
+   <div class="parent">
+      <div class="footer-text">
+         <p> Desarrollado con Astro por George Contreras con ❤️</p>
+      </div>
+      <div class="footer-a">
+         <a
+            href="https://www.linkedin.com/in/georgecontreras241"
+            target="_blank"
+            ><Icon name="mdi:linkedin" height={30} width={30} />
+         </a>
+         <a href="https://github.com/GeorgeContreras241" target="_blank"
+            ><Icon name="mdi:github" height={30} width={30} />
+         </a>
+      </div>
+   </div>
+</footer>
+
+<style>
+   footer {
+      position: relative;
+      z-index: 100;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      background-color: var(--color-bg-secondary);
+      opacity: 0.95;
+      backdrop-filter: blur(3 px);
+      padding: 30px;
+      border-top: var(--border-light);
+   }
+   .parent {
+      display: flex;
+      flex-flow: row;
+      width: clamp(100px, 95%, 800px);
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 20px;
+   }
+   .footer-text {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      gap: 30px;
+   }
+   .footer-text > p {
+      font-size: clamp(0.8rem, 1.9vw, 1rem);
+      color: var(--color-text);
+      font-family: "Roboto", sans-serif;
+   }
+   .footer-a {
+      display: flex;
+      flex-flow: row;
+      gap: 20px;
+      justify-content: flex-end;
+   }
+   .footer-a > a {
+      font-size: clamp(0.8rem, 1.9vw, 1rem);
+      color: var(--color-white);
+      text-decoration: none;
+      transition:
+         transform 0.5s ease,
+         color 0.3s ease;
+   }
+   .footer-a > a:first-child:hover {
+      color: var(--color-primary);
+      transform: scale(1.1);
+   }
+   .footer-a > a:nth-child(2):hover {
+      color: var(--color-text);
+      transform: scale(1.1);
+   }
+   .footer-a > a:nth-child(3):hover {
+      color: var(--color-accent);
+      transform: scale(1.1);
+   }
+</style>

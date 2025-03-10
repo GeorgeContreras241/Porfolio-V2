@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 
 
 export const CardProject = ({ data }) => {
@@ -9,7 +9,7 @@ export const CardProject = ({ data }) => {
             <div className="flip-card-front">
                <div className="card-image">
                   <img
-                     src={data.image}
+                     src={`../../src/assets/project0${data.image}-min.jpg`}
                      alt={data.title}
                   />
                </div>
