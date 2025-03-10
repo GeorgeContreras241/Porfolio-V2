@@ -9,7 +9,9 @@ export const CardProject = ({ data }) => {
             <div className="flip-card-front">
                <div className="card-image">
                   <img
-                     src={`../../src/assets/project0${data.image}-min.jpg`}
+                     src={data.image === "1" ?
+                        `./project01-min.jpg` :
+                        `./project0${data.image}-min.jpg`}
                      alt={data.title}
                   />
                </div>
