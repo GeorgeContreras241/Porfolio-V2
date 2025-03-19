@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+
 ---
 
 <div id="welcome">
@@ -24,12 +25,13 @@ import { Icon } from "astro-icon/components";
         aprender y mejorar constantemente.
       </p>
       <div class="welcome-a">
+        <a class="welcome-a-button" href="./cv.pdf" target="_blank">Descargar CV</a>
         <a href="https://www.linkedin.com/in/georgecontreras241" target="_blank"
           ><Icon name="mdi:linkedin" height={50} width={50} />
         </a>
         <a href="https://github.com/GeorgeContreras241" target="_blank"
           ><Icon name="mdi:github" height={50} width={50} />
-        </a>
+        </a>  
       </div>
     </div>
   </section>
@@ -107,6 +109,20 @@ import { Icon } from "astro-icon/components";
     justify-content: flex-end;
     margin-right: 2.5rem;
   }
+  .welcome-a-button {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--color-white);
+    border:1px solid  var(--color-accent);
+    background-color: inherit;
+    padding: 0px 20px;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+  }
+  .welcome-a-button:hover {
+    background-color: rgba(255, 166, 0, 0.555);
+  }
   .welcome-a > a {
     font-size: clamp(0.8rem, 1.9vw, 1rem);
     color: var(--color-white);
@@ -115,12 +131,8 @@ import { Icon } from "astro-icon/components";
       transform 0.5s ease,
       color 0.3s ease;
   }
-  .welcome-a > a:first-child:hover {
-    color: var(--color-primary);
-    transform: scale(1.1);
-  }
   .welcome-a > a:nth-child(2):hover {
-    color: var(--color-text);
+    color: var(--color-primary);
     transform: scale(1.1);
   }
   .welcome-a > a:nth-child(3):hover {
